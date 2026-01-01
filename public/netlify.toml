@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/api/*"
+  to = "https://your-api.cloudron.io/:splat"
+  status = 200
