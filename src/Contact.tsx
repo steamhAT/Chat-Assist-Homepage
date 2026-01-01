@@ -10,7 +10,7 @@ const Contact = () => {
 
     try {
       // Replace with your actual Cloudron/Backend URL
-      const response = await fetch('https://chat-assist-backend-45rs.onrender.com/contact', {
+      const response = await fetch('http://localhost:3000/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -35,7 +35,7 @@ const Contact = () => {
           <label className="block text-sm font-medium text-slate-700">Name</label>
           <input 
             type="text" required
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="w-full p-3 border-1 border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             value={formData.name}
             onChange={(e) => setFormData({...formData, name: e.target.value})}
           />
@@ -44,7 +44,7 @@ const Contact = () => {
           <label className="block text-sm font-medium text-slate-700">Email</label>
           <input 
             type="email" required
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="w-full p-3 border-1 border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             value={formData.email}
             onChange={(e) => setFormData({...formData, email: e.target.value})}
           />
@@ -53,7 +53,7 @@ const Contact = () => {
           <label className="block text-sm font-medium text-slate-700">Description</label>
           <textarea 
             required rows={4}
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="w-full p-3 border-1 border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             value={formData.description}
             onChange={(e) => setFormData({...formData, description: e.target.value})}
           />
