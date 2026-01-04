@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <div className="max-w-xl mx-auto p-8 bg-white shadow-lg rounded-2xl mt-10">
-      <h2 className="text-3xl font-bold mb-6 text-slate-800">Contact Support</h2>
+      <h2 className="text-3xl font-bold mb-6 text-slate-800">For credentials Contact support</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-slate-700">Name</label>
@@ -61,6 +61,7 @@ const Contact = () => {
         <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">
           Send Message
         </button>
+        <p>Facing issues, you can also reach out at <a href="mailto:support@mayekars.com">support@mayekars.com</a></p>
         {status && <p className="text-center mt-4 font-medium text-slate-600">{status}</p>}
       </form>
     </div>
