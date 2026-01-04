@@ -3,6 +3,14 @@ import Home from "./Home";
 import Contact from "./Contact";
 import Terms from "./Terms";
 import Privacy from "./Privacy";
+//Import Mixpanel SDK
+import mixpanel from "mixpanel-browser";
+
+// Create an instance of the Mixpanel object, your token is already added to this snippet
+mixpanel.init('950b3f2b1514c95a3c3839d7b3789a8e', {
+  autocapture: true,
+  record_sessions_percent: 100,
+})
 
 export default function App() {
   const chromeStoreUrl = import.meta.env.VITE_CHROMELINK;
@@ -34,6 +42,7 @@ export default function App() {
         {/* Page Content */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
